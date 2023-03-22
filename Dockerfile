@@ -10,5 +10,7 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # copy the src to the folder
 COPY ./src ./src
 
+EXPOSE 80
 # start the server
 CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+
